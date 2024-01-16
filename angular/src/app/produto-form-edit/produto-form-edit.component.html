@@ -1,0 +1,58 @@
+<mat-card>
+    <mat-card-content>
+        <form (ngSubmit)="onSubmit()" #produtoForm="ngForm">
+            <div>
+                <label>Id</label>
+                <br/>
+                <input type="number" [(ngModel)]="produto.id"
+                id="id"
+                name="id"
+                placeholder="Id"
+                required #id="ngModel">
+            </div>
+            <br/>
+            <div>
+                <label>Nome</label>
+                <br/>
+                <input type="text" [(ngModel)]="produto.nome"
+                       id="nome"
+                       name="nome"
+                       placeholder="Nome"
+                       required #nome="ngModel">
+            </div>
+            <br/>
+            <div>
+                <label>Marca</label>
+                <br/>
+                <input type="text" [(ngModel)]="produto.marca"
+                       id="marca"
+                       name="marca"
+                       placeholder="Marca"
+                       required #marca="ngModel">
+            </div>
+            <br/>
+            <div>
+                <label>Categoria</label>
+                <br/>
+                <input type="text" [(ngModel)]="produto.categoria"
+                       id="categoria"
+                       name="categoria"
+                       placeholder="Categoria"
+                       required #categoria="ngModel">
+            </div>
+            <br/>
+            <div>
+                <label>Preço</label>
+                <br/>
+                <input type="number" [(ngModel)]="produto.preco"
+                       id="preco"
+                       name="preco"
+                       placeholder="Preço"
+                       required #preco="ngModel">
+            </div>
+            <br/>
+            <div [hidden]="!produtoForm.form.invalid">Campos não podem estar vazios</div>
+            <button type="submit" [disabled]="!produtoForm.form.valid">Enviar</button>
+        </form>
+    </mat-card-content>
+</mat-card>

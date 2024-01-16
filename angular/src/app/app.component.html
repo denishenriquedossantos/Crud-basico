@@ -1,0 +1,22 @@
+<br/>
+<div style="text-align: center">
+  <h1>{{title}}</h1>
+</div>
+<div>
+  <mat-card>
+    <mat-card-content>
+      <div style="text-align: center">
+        <button mat-stroked-button style="right: 35px" routerLink="/listAll">Listar Tudo</button>
+        <button mat-stroked-button style="horiz-align: center" routerLink="/listWord">Procurar</button>
+        <button mat-stroked-button style="left: 35px" routerLink="/listId">Procurar por id</button>
+      </div>
+      <br/>
+      <div style="text-align: center">
+        <button mat-stroked-button style="right: 35px" routerLink="/add">Adicionar</button>
+        <button mat-stroked-button style="horiz-align: center" routerLink="/edit">Editar</button>
+        <button mat-stroked-button style="left: 35px" routerLink="/delete">Excluir</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <router-outlet></router-outlet>
+</div>

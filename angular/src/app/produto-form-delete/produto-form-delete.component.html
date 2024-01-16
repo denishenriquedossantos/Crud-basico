@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-content>
+        <form (ngSubmit)="onSubmit()" #produtoForm="ngForm">
+            <div>
+                <label>Id</label>
+                <br/>
+                <input type="number" [(ngModel)]="produto.id"
+                id="id"
+                name="id"
+                placeholder="Id"
+                required #id="ngModel">
+            </div>
+            <br/>
+            <div [hidden]="!produtoForm.form.invalid">Campos não podem estar vazios</div>
+            <button type="submit" [disabled]="!produtoForm.form.valid">Enviar</button>
+        </form>
+    </mat-card-content>
+</mat-card>
